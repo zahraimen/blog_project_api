@@ -1,10 +1,10 @@
 from django.urls import path
-from . import views
+from .views import PostListView,PostDetailView,UserListView,UserDetail
 
 urlpatterns = [
-    path('',views.PostListView.as_view()),
-    path('<int:pk>/',views.PostDetailView.as_view()),
-    path('users/',views.UserListView.as_view()),
-    path('users/<int:pk>/', views.UserDetail.as_view()),
+    path('',PostListView.as_view()),
+    path('<int:pk>/',PostDetailView.as_view()),
+    path('users/',UserListView.as_view()),
+    path('users/<int:pk>/', UserDetail.as_view()),
     
 ]
